@@ -1,0 +1,6 @@
+<Project>
+  <UsingTask TaskName="GerwimFeiken.Publishing.Tasks.SetWindowsReleaseVersionEnvironmentVariable" AssemblyFile="$(MSBuildThisFileDirectory)..\GerwimFeiken.Publishing.Tasks.dll" />
+  <Target Name="BeforeBuild">
+    <SetWindowsReleaseVersionEnvironmentVariable />
+  </Target>
+</Project>

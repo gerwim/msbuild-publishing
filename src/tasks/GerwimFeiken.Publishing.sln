@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30503.244
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GerwimFeiken.Publishing.Tasks", "GerwimFeiken.Publishing.Tasks\GerwimFeiken.Publishing.Tasks.csproj", "{FFAF0D95-B9E8-4158-81D7-96F3B24538ED}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GerwimFeiken.Publishing.Tasks.Tests", "GerwimFeiken.Publishing.Tasks.Tests\GerwimFeiken.Publishing.Tasks.Tests.csproj", "{336CDF18-907E-4710-B91B-C39E51EB2561}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FFAF0D95-B9E8-4158-81D7-96F3B24538ED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FFAF0D95-B9E8-4158-81D7-96F3B24538ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FFAF0D95-B9E8-4158-81D7-96F3B24538ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FFAF0D95-B9E8-4158-81D7-96F3B24538ED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{336CDF18-907E-4710-B91B-C39E51EB2561}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{336CDF18-907E-4710-B91B-C39E51EB2561}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{336CDF18-907E-4710-B91B-C39E51EB2561}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{336CDF18-907E-4710-B91B-C39E51EB2561}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E04818AF-FDF5-4940-900A-4C2182A665AD}
+	EndGlobalSection
+EndGlobal
