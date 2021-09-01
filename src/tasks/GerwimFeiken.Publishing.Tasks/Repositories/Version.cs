@@ -4,7 +4,7 @@
     {
         public System.Version GetOsVersion()
         {
-            return System.Environment.Version;
+            return System.Environment.OSVersion.Version;
         }
     }
 }
