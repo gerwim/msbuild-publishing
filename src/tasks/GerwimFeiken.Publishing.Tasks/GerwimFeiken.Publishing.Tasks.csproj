@@ -74,7 +74,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Repositories\IRegistry.cs" />
+    <Compile Include="Repositories\IVersion.cs" />
     <Compile Include="Repositories\Registry.cs" />
+    <Compile Include="Repositories\Version.cs" />
     <Compile Include="SetWindowsReleaseVersionEnvironmentVariable.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

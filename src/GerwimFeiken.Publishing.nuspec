@@ -2,12 +2,12 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
     <metadata>
         <id>GerwimFeiken.Publishing</id>
-        <version>0.1</version>
+        <version>0.2</version>
         <description>Adds functionality on build events.</description>
         <projectUrl>https://github.com/gerwim/msbuild-publishing</projectUrl>
         <authors>Gerwim Feiken</authors>
         <license type="expression">MIT</license>
-        <releaseNotes>0.1.0 - Initial release</releaseNotes>
+        <releaseNotes>0.2.0 - Added support for Server 2022</releaseNotes>
     </metadata>
     
     <files>

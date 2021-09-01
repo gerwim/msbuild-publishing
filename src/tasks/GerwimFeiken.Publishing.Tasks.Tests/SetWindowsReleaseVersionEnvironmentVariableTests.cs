@@ -1,4 +1,5 @@
-﻿using GerwimFeiken.Publishing.Tasks.Tests.Fakes;
+﻿using System;
+using GerwimFeiken.Publishing.Tasks.Tests.Fakes;
 using GerwimFeiken.Publishing.Tasks.Repositories;
 using Moq;
 using Xunit;
@@ -26,15 +27,22 @@ namespace GerwimFeiken.Publishing.Tasks.Tests
         }
 
         [Theory]
-        [InlineData("1607", "ltsc2016")]
-        [InlineData("1809", "ltsc2019")]
-        public void ConvertsToLtscVersions(string version, string expected)
+        [InlineData("1607", 10, 14393, "ltsc2016")]
+        [InlineData("1809", 10, 17763, "ltsc2019")]
+        [InlineData("21H2", 10, 20348, "ltsc2022")]
+        [InlineData("21H2", 10, 11111, "21H2")] // fake build number
+        [InlineData("25H2", 05, 11111, "25H2")] // fake major version
+        public void ReturnsCorrectVersions(string releaseId, int major, int buildNumber, string expected)
         {
             // Arrange
-            var registry = new Mock<IRegistry>();
-            registry.Setup(x => x.Read(It.IsAny<string>(), It.IsAny<string>())).Returns(version);
+            var registryMock = new Mock<IRegistry>();
+            registryMock.Setup(x => x.Read(It.IsAny<string>(), It.IsAny<string>())).Returns(releaseId);
 
-            var sut = new SetWindowsReleaseVersionEnvironmentVariable(registry.Object)
+            var versionMock = new Mock<IVersion>();
+            versionMock.Setup(x => x.GetOsVersion()).Returns(new System.Version(major, 0, buildNumber));
+
+
+            var sut = new SetWindowsReleaseVersionEnvironmentVariable(registryMock.Object, versionMock.Object)
             {
                 BuildEngine = new FakeBuildEngine()
             };
