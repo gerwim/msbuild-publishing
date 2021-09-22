@@ -1,5 +1,5 @@
 # GerwimFeiken.Publishing
-This NuGet package adds additional functionality to the project. The current version (0.1.0) has limited functionality, as it only sets the `GerwimFeiken_Publishing_WindowsReleaseId` environment variable to match your Windows release ID.
+This [NuGet package](https://www.nuget.org/packages/GerwimFeiken.Publishing) adds additional functionality to the project. The current version has limited functionality, as it only sets the `GerwimFeiken_Publishing_WindowsReleaseId` environment variable to match your Windows release ID.
 
 The reasoning behind this is because you want to match the kernel version of the docker image with your docker host to run containers in process isolation mode (for more information, see [the Microsoft docs](https://docs.microsoft.com/en-us/virtualization/windowscontainers/deploy-containers/version-compatibility)). 
 
