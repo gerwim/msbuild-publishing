@@ -10,8 +10,10 @@ E.g. you are running:
 | Windows 10 | 1809 | ltsc2019 |
 | Windows 10 | 1903 | 1903 |
 | Windows 10 | 2004 | 2004 |
-| Windows Server 2016 | 1607 | ltsc2016 |
-| Windows Server 2019 | 1809 | ltsc2019 |
+| Windows 11 | * (any) | ltsc2022 |
+| Windows Server 2016 | n/a | ltsc2016 |
+| Windows Server 2019 | n/a | ltsc2019 |
+| Windows Server 2022 | n/a | ltsc2022 |
 
 \* the table above is an example and not exhaustive
 

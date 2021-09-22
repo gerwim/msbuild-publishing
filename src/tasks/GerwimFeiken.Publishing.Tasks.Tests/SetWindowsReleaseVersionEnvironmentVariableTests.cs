@@ -30,6 +30,7 @@ namespace GerwimFeiken.Publishing.Tasks.Tests
         [InlineData("1607", 10, 14393, "ltsc2016")]
         [InlineData("1809", 10, 17763, "ltsc2019")]
         [InlineData("21H2", 10, 20348, "ltsc2022")]
+        [InlineData("21H2", 10, 22000, "ltsc2022")] // Windows 11 build number
         [InlineData("21H2", 10, 11111, "21H2")] // fake build number
         [InlineData("25H2", 05, 11111, "25H2")] // fake major version
         public void ReturnsCorrectVersions(string releaseId, int major, int buildNumber, string expected)

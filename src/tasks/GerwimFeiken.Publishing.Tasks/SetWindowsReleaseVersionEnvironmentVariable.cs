@@ -63,6 +63,12 @@ namespace GerwimFeiken.Publishing.Tasks
             if (version.Major == 10 && LtscVersionsDict.TryGetValue(version.Build, out string convertedReleaseId))
                 return convertedReleaseId;
 
+            // Windows 11 is currently using build number 22000 (or higher) and supports process isolation for newer versions:
+            // Starting with Windows Server 2022, customers will be able to run their Windows Server 2022 container images with either process or Hyper-V isolation on any build of Windows Server 2022 or Windows 11
+            // source: https://techcommunity.microsoft.com/t5/containers/windows-server-2022-and-beyond-for-containers/ba-p/2712487
+            if (version.Major == 10 && version.Build >= 20348)
+                return "ltsc2022";
+
             string displayVersion = Registry.Read(@"HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion", "DisplayVersion");
             string releaseId = Registry.Read(@"HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion", "ReleaseId"); // ReleaseId is deprecated as of version 2009: https://twitter.com/bytenerd/status/1395071115072966656
 
